@@ -1,7 +1,8 @@
 categorical_features = [
     'language',
     'canton',
-    'typology'
+    'typology',
+    'health_region'
 ]
 
 skewed_features = [
@@ -43,7 +44,6 @@ unskewed_features = [
     'wooded_area_percent',
     'dwelling_vacancy_rate',
     'social_assistance_rate',
-    'health_region',
     'health_premium_child',
     'health_premium_young',
     'health_premium_adult',
