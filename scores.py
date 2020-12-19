@@ -11,9 +11,9 @@ def save_score(model, mae, r2, csv_path):
         df = pd.DataFrame(columns=cols)
 
     if model in df.index:
-        df.loc[model][cols] = [mae, r2]
+        df.loc[model][cols] = [round(mae, 12), round(r2, 12)]
     else:
-        df1 = pd.DataFrame.from_dict({model: [mae, r2]}, orient="index", columns=cols)
+        df1 = pd.DataFrame.from_dict({model: [round(mae, 12), round(r2, 12)]}, orient="index", columns=cols)
         df = df.append(df1)
 
     df.index.name = "model"
